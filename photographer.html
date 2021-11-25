@@ -7,7 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Accédez aux portfolios de photographes freelance, et trouver celui qui vous correspond !" />
 
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="scss/style.css" rel="stylesheet" type="text/css" />
+    <link href="scss/photographer.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
@@ -24,14 +25,27 @@
       <img src="assets/images/logo.png" class="logo" />
     </header>
     <main id="main">
-      <div class="photograph-header">
-        <img src="assets/images/ID/EllieRoseWilkens.jpg"/>
-        <p>Prénom</p>
-        <p>Nom</p>
-        <p>Ville</p>
-        <p>Texte</p>
-        <p>Tags</p>
+      <div class="photograph-header">  
+        <div class="description_profile">
+          <h1>Ellie-Rose Wilkens</h1>
+          <h2>London, UK</h2>
+          <h3>Capturer des compositions complexes.</h3>
+        </div>
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div>
+          <img class="img_profile" src="assets/images/ID/EllieRoseWilkens.jpg"/>
+        </div>
+      </div>
+      <div class="filters">
+        <label for="tag_filters" class="filter_text">Trier par :</label>
+          <select name="tag_filters" id="tag_filters">
+            <option value="popularity">Popularité</option>
+            <option value="date">Date</option>
+            <option value="title">Titre</option>
+          </select>
+      </div>
+      <div class="content_photos">
+
       </div>
     </main>
     <div id="contact_modal">

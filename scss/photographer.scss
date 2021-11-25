@@ -6,6 +6,10 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
 }
 
 .contact_button {
@@ -15,6 +19,43 @@
     padding: 11px;
     width: 170px;
     height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.img_profile{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.description_profile{
+    
+}
+
+.filters{
+    display:flex;
+    margin: 0 100px;
+    padding-top:10px;
+}
+
+.filter_text{
+    margin-top:15px;
+    margin-left:15px;
+}
+
+#tag_filters{
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    margin-left:15px;
+    width: 170px;
+    height: 50px;
     border: none;
     background-color: #901C1C;
     border-radius: 5px;

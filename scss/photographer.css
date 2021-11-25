@@ -67,6 +67,10 @@
   cursor: pointer;
 }
 
+.articles-section {
+  margin: 0 100px;
+}
+
 .modal {
   border-radius: 5px;
   background-color: #DB8876;

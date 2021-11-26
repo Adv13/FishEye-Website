@@ -4,27 +4,40 @@
     
     async function getPhotographers() {
         // Penser à remplacer par les données récupérées dans le json
-        const photographers = [
-            var requestURL = 'https://github.com/OpenClassrooms-Student-Center/Front-End-Fisheye/blob/main/data/photographers.json';
-            var request = new XMLHttpRequest();
-            request.open('GET', requestURL);
-            request.responseType = 'json';
-            request.send();
-            request.onload = function(){
-                if(request.status >=200 && request.status < 400){
-                    //success
-                    var data = request.response;
-                    getPhotographers(data);
-                }else{
-                    //error
-                    console.error();
-                }
-            };
-            request.onerror = () => {
-                //msg error
-                console.error();
-            }
+       const photographers = [
+            {
+                "name": "Ma data test",
+                "id": 1,
+                "city": "Paris",
+                "country": "France",
+                "tagline": "Ceci est ma data test",
+                "price": 400,
+                "portrait": "account.png"
+            },
+            {
+                "name": "Autre data test",
+                "id": 2,
+                "city": "Londres",
+                "country": "UK",
+                "tagline": "Ceci est ma data test 2",
+                "price": 500,
+                "portrait": "account.png"
+            },
         ]
+
+        var requestURL = '../data/photographers.json'
+        fetch(requestURL)
+        .then(function (response) {
+            return response.json();
+    
+        })
+        .then(function (data){
+            console.log(data);
+        })
+        .catch(function (err) {
+            console.log("Something went wrong!", err);
+        });
+
         // et bien retourner le tableau photographers seulement une fois
         return ({
             photographers: [...photographers, ...photographers, ...photographers]})

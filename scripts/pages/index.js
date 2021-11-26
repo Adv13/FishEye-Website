@@ -17,6 +17,7 @@
                     getPhotographers(data);
                 }else{
                     //error
+                    console.error();
                 }
             };
             request.onerror = () => {

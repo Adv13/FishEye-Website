@@ -1,3 +1,24 @@
+    var requestURL = 'https://github.com/OpenClassrooms-Student-Center/Front-End-Fisheye/blob/main/data/photographers.json'
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function(){
+        if(request.status >=200 && request.status < 400){
+            //success
+            var data = request.response;
+            getPhotographers(data);
+        }else{
+            //error
+        }
+    };
+        request.onerror = function(){
+            //msg error
+            console.error();
+        }
+    
+    
+    
     async function getPhotographers() {
         // Penser à remplacer par les données récupérées dans le json
         const photographers = [

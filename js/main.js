@@ -8,9 +8,9 @@ import ApiFishEye from './provider/ApiFishEye.js';
 import HomePageBuilder from './home/HomePageBuilder.js';
 
 // PH PAGES
-//import PhotographerProfil from './photographers/PhotographerProfil.js';
-//import DropDownMenu from './photographers/DropDownSort.js';
-//import MediaBuilder from './photographers/MediaBuilder.js';
+import PhotographerProfil from './photographers/PhotographerProfil.js';
+import DropDownMenu from './photographers/DropDownSort.js';
+import MediaBuilder from './photographers/MediaBuilder.js';
 
 (function appDispatch() { // function pour dispatacher les données sur la page web
     new ApiFishEye().getDataFishEye().then((data) => { //afficher nouvel object de la class ApiFishEye et récupérer les données

@@ -1,6 +1,6 @@
 'use strict';
 /////////////////////////////////////////
-
+//test
 import MediaFactory from './MediaFactory.js';
 import Lightbox from '../photographers/LightBox.js';
 

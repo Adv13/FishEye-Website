@@ -4,7 +4,7 @@
 import MediaFactory from './MediaFactory.js';
 import Lightbox from '../photographers/LightBox.js';
 
-export default class GalleryFactory {
+export default class GalleryFactory {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     constructor() {
         this.totalLike = 0;
     }

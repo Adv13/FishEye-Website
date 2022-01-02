@@ -1,7 +1,7 @@
 'use strict';
 /////////////////////////////////////////
 
-export default class LightBox {
+export default class LightBox {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     constructor() {
         this.currentIndex = 0;
     }

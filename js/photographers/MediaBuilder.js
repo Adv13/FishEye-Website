@@ -4,7 +4,7 @@
 import GalleryFactory from '../Factory/GalleryFactory.js';
 import LikeSubscriber from './Likes.js';
 
-export default class MediaBuilder {
+export default class MediaBuilder {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     // call the GalleryFactory to create the media section with 'Like' function and the box
     photographersMedias(data) {
         let media = data.media;

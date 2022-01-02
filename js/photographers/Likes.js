@@ -1,7 +1,7 @@
 'use strict';
 /////////////////////////////////////////
 
-export default class LikeSubscriber {
+export default class LikeSubscriber {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     // add or remove a 'like' when clicking on the 'like' icon   
     constructor() {
         let media = document.getElementById('ph-works');

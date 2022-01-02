@@ -1,7 +1,7 @@
 'use strict';
 /////////////////////////////////////////
 
-export default class Form {
+export default class Form {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     fields() {
         // DOM ELEMENTS FORM FIELDS VALIDATION
         let form = document.getElementById('contact-form');

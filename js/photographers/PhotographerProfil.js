@@ -4,7 +4,7 @@
 import Modal from './Modal.js';
 import Form from './Form.js';
 
-export default class PhotographerProfil {
+export default class PhotographerProfil {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     // Check on which page the user is located, if the position corresponds with the photographer's "id", create the photographer's 'Profile' section
     displayPhotographerProfil(data) {
         let photographersData = data.photographers;

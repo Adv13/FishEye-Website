@@ -1,15 +1,15 @@
 'use strict';
 /////////////////////////////////////////
 
-export default class ImageFactory {
+export default class ImageFactory {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     // CREATE ELEMENT IMG WITH SRC, ALT, ROLE
-    createHTML(element) {
-        let eltImage = document.createElement('img');
-        eltImage.setAttribute('src', element.image);
-        eltImage.setAttribute('alt', element.alt);
-        eltImage.setAttribute('role', 'button');
-        eltImage.className = 'ph-media';
+    createHTML(element) {//creation de l'element suivant :
+        let eltImage = document.createElement('img');//créer un element image sous "img"
+        eltImage.setAttribute('src', element.image);//ajouter l'attribut src à l'element
+        eltImage.setAttribute('alt', element.alt);//ajouter l'attribut alt à l'element pour le texte alternatif
+        eltImage.setAttribute('role', 'button');////ajouter l'attribut role avec le choix button à l'image
+        eltImage.className = 'ph-media';//ajouter la class "ph-media" à l'element video
 
-        return eltImage;
+        return eltImage;//retourner l'element créé
     }
 }

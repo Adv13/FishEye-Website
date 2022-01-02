@@ -1,7 +1,7 @@
 'use strict';
 /////////////////////////////////////////
 
-export default class Modal {
+export default class Modal {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     // Events, launch/close the modal by clicking on the 'contact me' button
     modal(data) {
         let modalBtn = document.getElementById("ph-contact");

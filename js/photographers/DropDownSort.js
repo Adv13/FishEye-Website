@@ -3,7 +3,7 @@
 
 import GalleryFactory from '../Factory/GalleryFactory.js';
 
-export default class DropDownMenu {
+export default class DropDownMenu {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     // Events, open/close the dropDownMenu
     dropDown(data) {
         let arrowOpen = document.getElementsByClassName('sort-btn');

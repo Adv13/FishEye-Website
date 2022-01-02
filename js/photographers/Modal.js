@@ -33,7 +33,7 @@ export default class Modal {// export default permet d'exporter une class, varia
     // DISPLAY PH NAMES IN FORM
     formPhName(data) {//function pour le form avec les datas
         let id = window.location.search.split('id=')[1];//sélectionner l'id du photographe dans les datas
-        let photographers = !id ? data : data.filter(photographer => photographer.id == id);//vérifier qu'on a bien l'id du photographe concerné
+        let photographers = !id ? data : data.filter(photographer => photographer.id == id);//vérifier qu'on a bien l'id du photographe concerné et filtrer en conséquence
         let phName = document.getElementById('ph-form-name');//mettre element avec id "ph-form-name" dans une variable
         let phNameTemplate = `${photographers[0].name}`//mettre le nom du photographe qu'on veut contacter dans le form dans une variable
         phName.innerHTML = phNameTemplate;//afficher le nom du photographe qu'on veut contacter dans le form

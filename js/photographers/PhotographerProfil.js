@@ -1,4 +1,4 @@
-'use strict';
+'use strict';// code ci-dessous exécuté de manière stricte pour ne pas utiliser de variables non déclarées pour éviter certaines erreurs
 /////////////////////////////////////////
 
 import Modal from './Modal.js';

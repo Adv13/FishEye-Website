@@ -2,7 +2,6 @@
 /////////////////////////////////////////
 
 import Filter from './FilterTags.js';
-import Scroll from './Scroll.js';
 
 // DISPLAY ALL PHOTOGRAPHERS BY DEFAULT
 export default class HomePageBuilder { // cf comment in ApiFishEye.js

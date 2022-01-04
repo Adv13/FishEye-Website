@@ -1,4 +1,4 @@
-'use strict';
+'use strict';// code ci-dessous exécuté de manière stricte pour ne pas utiliser de variables non déclarées pour éviter certaines erreurs
 /////////////////////////////////////////
 
 export default class VideoFactory {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom

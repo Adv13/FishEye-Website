@@ -49,8 +49,8 @@ export default class LightBox {// export default permet d'exporter une class, va
 
     // turn to the next media, même qu'au dessus mais pour la droite
     next(elt, media, name) {
-        elt.addEventListener('click', () => {
-            this.currentIndex += 1;
+        elt.addEventListener('click', () => {//lorsque clic souris
+            this.currentIndex += 1;;//+1 dans l'index
             let lightBoxMedia = document.getElementById('works-lightbox-media');
             let lightBoxName = document.getElementById('works-lightbox-name');
 

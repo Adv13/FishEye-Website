@@ -46,7 +46,7 @@ export default class LightBox {// export default permet d'exporter une class, va
             lightBoxName.innerHTML = `${nameSrc}`;//ajout ligne html avec nameSrc du dessus
         })
     }
-/////////
+/////////////
     // turn to the next media, même qu'au dessus mais pour la droite
     next(elt, media, name) {
         elt.addEventListener('click', () => {//lorsque clic souris

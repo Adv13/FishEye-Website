@@ -14,6 +14,9 @@ export default class Modal {// export default permet d'exporter une class, varia
         if (closeBtn) {//si
             closeBtn[0].addEventListener('click', this.closeModal);// il y a un clic sur le closeBtn, fermer le modal
         }
+        if (closeBtn) {
+            closeBtn[0].addEventListener('keydown', this.closeModal);
+        }
     }
 
     // LAUNCH MODAL
@@ -28,6 +31,7 @@ export default class Modal {// export default permet d'exporter une class, varia
         let modalbg = document.getElementById("form-dialog");//mettre element avec id "form-dialog" dans une variable
 
         modalbg.style.display = 'none';//ne pas afficher le block du form à la variable
+
     }
 
     // DISPLAY PH NAMES IN FORM

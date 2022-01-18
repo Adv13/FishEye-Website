@@ -30,4 +30,5 @@ ul li {
     padding: .0625rem .375rem;
     text-decoration: none;
     transition: all .2s;
+    cursor:pointer;
 }

@@ -14,9 +14,7 @@ export default class Modal {// export default permet d'exporter une class, varia
         if (closeBtn) {//si
             closeBtn[0].addEventListener('click', this.closeModal);// il y a un clic sur le closeBtn, fermer le modal
         }
-        if (closeBtn) {
-            closeBtn[0].addEventListener('keydown', this.closeModal);
-        }
+  
     }
 
     // LAUNCH MODAL

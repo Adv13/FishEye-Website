@@ -48,21 +48,21 @@ export default class LightBox {// export default permet d'exporter une class, va
     }
 ////////////////////////////
     // turn to the next media, même qu'au dessus mais pour la droite
-    next(elt, media, name) {
+    next(elt, media, name) {//function previous avec parameters
         elt.addEventListener('click', () => {//lorsque clic souris
             this.currentIndex += 1;;//+1 dans l'index
-            let lightBoxMedia = document.getElementById('works-lightbox-media');
-            let lightBoxName = document.getElementById('works-lightbox-name');
+            let lightBoxMedia = document.getElementById('works-lightbox-media');//element with id 'works-lightbox-media' dans variable
+            let lightBoxName = document.getElementById('works-lightbox-name');//element with id 'works-lightbox-name' dans variable
 
-            if (this.currentIndex > name.length - 1) {
-                this.currentIndex = 0;
+            if (this.currentIndex > name.length - 1) {//si currentIndex a sa position dans le array qui est supérieur à la taille du array -1
+                this.currentIndex = 0;//alors currentIndex = 0
             }
 
-            let src = media[this.currentIndex];
-            let nameSrc = name[this.currentIndex];
+            let src = media[this.currentIndex];//attribuer infos media du currentIndex dans src
+            let nameSrc = name[this.currentIndex];//attribuer nom du currentIndex dans nameSrc
 
-            lightBoxMedia.innerHTML = `${src}`;
-            lightBoxName.innerHTML = `${nameSrc}`;
+            lightBoxMedia.innerHTML = `${src}`;//rajouter code html avec le src maj
+            lightBoxName.innerHTML = `${nameSrc}`;//rajouter code html avec nomSrc maj
         })
     }
 

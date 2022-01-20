@@ -1,5 +1,5 @@
 'use strict';// code ci-dessous exécuté de manière stricte pour ne pas utiliser de variables non déclarées pour éviter certaines erreurs
-/////////////////////////////////////////
+//////////////////////////////////////////////
 
 // DATA
 import ApiFishEye from './provider/ApiFishEye.js';

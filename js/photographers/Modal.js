@@ -39,9 +39,9 @@ export default class Modal {// export default permet d'exporter une class, varia
     keyboard() {//for escape and enter form
         document.addEventListener('keydown', (key) => {
             let modalbg = document.getElementById("form-dialog");//mettre element avec id "form-dialog" dans une variable
-            let btnModal = document.getElementById("ph-contact");//meme chose
+            
             // OPEN WITH ENTER
-            if (key.code == "Enter" && btnModal == "ph-contact"){
+            if (key.code == "Enter"){
                 modalbg.style.display = 'block';// afficher le block de la modal
             }
             //CLOSE WITH ESCAPE

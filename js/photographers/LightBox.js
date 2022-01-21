@@ -23,7 +23,7 @@ export default class LightBox {// export default permet d'exporter une class, va
         this.previous(document.querySelector('.left-arrow-lightbox'), currentMedia, currentMediaName);//attribuer function previous à la flèche de guache avec currentMedia + name
         this.next(document.querySelector('.right-arrow-lightbox'), currentMedia, currentMediaName);//attribuer function previous à la flèche de droite avec currentMedia + name
         this.close();//fermer
-        this.keyboard(currentMedia, currentMediaName);//naviguer avec ketboard à gauche et droite
+        this.keyboard(currentMedia, currentMediaName);//naviguer avec keyboard à gauche et droite
         return this
     }
 
@@ -85,16 +85,10 @@ export default class LightBox {// export default permet d'exporter une class, va
                 lightBox.style.display = 'none';//ne pas afficher la variable
             }
 
-            else if (key.code == "Space") {//fermer lightbox si on appyue sur la touche escape
+            else if (key.code == "Space") {//ouvrir lightbox avec touche space
                 let lightBox = document.getElementById('works-lightbox');
-                lightBox.style.display = 'block';//ne pas afficher la variable
-
-                //la position de currentIndex
-
-                if (this.currentIndex == currentMediaName.length) {//si currentIndex a sa position dans le array qui est égale à la taille du array
-                    this.currentIndex = 0;
-                    
-                }
+    
+                this.currentIndex = 0; 
 
                 let src = currentMedia[this.currentIndex];//attribuer infos media du currentIndex dans src
                 let nameSrc = currentMediaName[this.currentIndex];//attribuer nom du currentIndex dans nameSrc
@@ -102,7 +96,8 @@ export default class LightBox {// export default permet d'exporter une class, va
                 lightBoxMedia.innerHTML = `${src}`;//rajouter code html avec le src maj
                 lightBoxName.innerHTML = `${nameSrc}`;//rajouter code html avec nomSrc maj
 
-                
+                lightBox.style.display = 'block';//afficher la variable
+               
             }
 
             // ARROW RIGHT TO STEP RIGHT

@@ -5,7 +5,7 @@ import Filter from './FilterTags.js';
 
 // DISPLAY ALL PHOTOGRAPHERS BY DEFAULT
 export default class HomePageBuilder { // cf comment in ApiFishEye.js
-    // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button
+    // Build the photographers section, call the 'filtertags' function
     displayPhotographers(data) {
         let photographers = data.photographers;// attribuer data.photographers à photographers
         photographers.map(photographe => { //The map() method in JavaScript creates an array by calling a specific function on each element present in the parent array. Ici, on applique la méthode de photographers à photographe afin de pouvoir:

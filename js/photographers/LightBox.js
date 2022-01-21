@@ -85,6 +85,25 @@ export default class LightBox {// export default permet d'exporter une class, va
                 lightBox.style.display = 'none';//ne pas afficher la variable
             }
 
+            else if (key.code == "Enter") {//fermer lightbox si on appyue sur la touche escape
+                let lightBox = document.getElementById('works-lightbox');
+                lightBox.style.display = 'block';//ne pas afficher la variable
+
+                this.currentIndex;//ajouter +1 à la position de currentIndex
+
+                if (this.currentIndex == currentMediaName.length) {//si currentIndex a sa position dans le array qui est supérieur à la taille du array -1
+                    this.currentIndex = 0;//alors currentIndex = 0
+                }
+
+                let src = currentMedia[this.currentIndex];//attribuer infos media du currentIndex dans src
+                let nameSrc = currentMediaName[this.currentIndex];//attribuer nom du currentIndex dans nameSrc
+
+                lightBoxMedia.innerHTML = `${src}`;//rajouter code html avec le src maj
+                lightBoxName.innerHTML = `${nameSrc}`;//rajouter code html avec nomSrc maj
+
+                
+            }
+
             // ARROW RIGHT TO STEP RIGHT
             else if (key.code == "ArrowRight") {//si la touche activée correspond à la touche flèche droite du clavier
                 this.currentIndex += 1;//ajouter +1 à la position de currentIndex

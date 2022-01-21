@@ -29,6 +29,6 @@ export default class HomePageBuilder { // cf comment in ApiFishEye.js
             articlePhotographers.innerHTML = templatePhotographer;//ajout sous articlePhotographers des lignes html dans la variable templatePhotographer
         })
         new Filter().filterTags();
-        new Scroll().scrollButton();
+        
     }
 }

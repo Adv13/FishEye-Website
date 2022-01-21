@@ -14,7 +14,10 @@ export default class Modal {// export default permet d'exporter une class, varia
         if (closeBtn) {//si
             closeBtn[0].addEventListener('click', this.closeModal);// il y a un clic sur le closeBtn, fermer le modal
         }
-  
+        if(closeBtn){
+            closeBtn[0].addEventListener('keydown' === 'escape', this.closeModal);
+        }
+        
     }
 
     // LAUNCH MODAL
@@ -30,6 +33,18 @@ export default class Modal {// export default permet d'exporter une class, varia
 
         modalbg.style.display = 'none';//ne pas afficher le block du form à la variable
 
+    }
+
+    // WITH KEYBOARD
+    keyboard() {//for escape and enter
+        document.addEventListener('keydown', (key) => {
+            let modalbg = document.getElementById("form-dialog");//mettre element avec id "form-dialog" dans une variable
+
+            // ESCAPE TO CLOSE
+            if (key.code == "Escape") {//fermer lightbox si on appyue sur la touche escape
+                modalbg.style.display = 'none';//ne pas afficher le block du form à la variable
+            }
+        })
     }
 
     // DISPLAY PH NAMES IN FORM

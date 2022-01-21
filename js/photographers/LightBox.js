@@ -85,14 +85,15 @@ export default class LightBox {// export default permet d'exporter une class, va
                 lightBox.style.display = 'none';//ne pas afficher la variable
             }
 
-            else if (key.code == "Enter") {//fermer lightbox si on appyue sur la touche escape
+            else if (key.code == "Space") {//fermer lightbox si on appyue sur la touche escape
                 let lightBox = document.getElementById('works-lightbox');
                 lightBox.style.display = 'block';//ne pas afficher la variable
 
-                this.currentIndex;//ajouter +1 à la position de currentIndex
+                //la position de currentIndex
 
-                if (this.currentIndex == currentMediaName.length) {//si currentIndex a sa position dans le array qui est supérieur à la taille du array -1
-                    this.currentIndex = 0;//alors currentIndex = 0
+                if (this.currentIndex == currentMediaName.length) {//si currentIndex a sa position dans le array qui est égale à la taille du array
+                    this.currentIndex = 0;
+                    
                 }
 
                 let src = currentMedia[this.currentIndex];//attribuer infos media du currentIndex dans src

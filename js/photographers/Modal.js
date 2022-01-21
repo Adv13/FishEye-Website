@@ -36,14 +36,19 @@ export default class Modal {// export default permet d'exporter une class, varia
     }
 
     // WITH KEYBOARD
-    keyboard() {//for escape and enter
+    keyboard() {//for escape and enter form
         document.addEventListener('keydown', (key) => {
             let modalbg = document.getElementById("form-dialog");//mettre element avec id "form-dialog" dans une variable
-
-            // ESCAPE TO CLOSE
-            if (key.code == "Escape") {//fermer lightbox si on appyue sur la touche escape
-                modalbg.style.display = 'none';//ne pas afficher le block du form à la variable
+            let btnModal = document.getElementById("ph-contact");//meme chose
+            // OPEN WITH ENTER
+            if (key.code == "Enter" && btnModal == "ph-contact"){
+                modalbg.style.display = 'block';// afficher le block de la modal
             }
+            //CLOSE WITH ESCAPE
+            else if (key.code == "Escape") {//fermer modal si on appuye sur la touche escape
+                modalbg.style.display = 'none';//ne pas afficher le block de la modal
+            }
+            
         })
     }
 

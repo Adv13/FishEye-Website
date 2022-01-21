@@ -79,26 +79,27 @@ export default class LightBox {// export default permet d'exporter une class, va
             let lightBoxMedia = document.getElementById('works-lightbox-media');
             let lightBoxName = document.getElementById('works-lightbox-name');
 
-            // ESCAPE TO CLOSE
-            if (key.code == "Escape") {//fermer lightbox si on appyue sur la touche escape
+            //ENTER TO OPEN
+            if (key.code == 'Space'){
                 let lightBox = document.getElementById('works-lightbox');//mettre id "works-lightbox" dans variable
-                lightBox.style.display = 'none';//ne pas afficher la variable
-            }
-
-            else if (key.code == "Space") {//ouvrir lightbox avec touche space
-                let lightBox = document.getElementById('works-lightbox');
-    
-                this.currentIndex = 0; 
+                
+                this.currentIndex = 0;
 
                 let src = currentMedia[this.currentIndex];//attribuer infos media du currentIndex dans src
                 let nameSrc = currentMediaName[this.currentIndex];//attribuer nom du currentIndex dans nameSrc
 
                 lightBoxMedia.innerHTML = `${src}`;//rajouter code html avec le src maj
                 lightBoxName.innerHTML = `${nameSrc}`;//rajouter code html avec nomSrc maj
-
-                lightBox.style.display = 'block';//afficher la variable
-               
+                
+                lightBox.style.display = 'block';//ne pas afficher la variable
             }
+
+            // ESCAPE TO CLOSE
+            if (key.code == "Escape") {//fermer lightbox si on appyue sur la touche escape
+                let lightBox = document.getElementById('works-lightbox');//mettre id "works-lightbox" dans variable
+                lightBox.style.display = 'none';//ne pas afficher la variable
+            }
+
 
             // ARROW RIGHT TO STEP RIGHT
             else if (key.code == "ArrowRight") {//si la touche activée correspond à la touche flèche droite du clavier

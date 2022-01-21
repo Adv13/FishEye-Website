@@ -27,5 +27,6 @@ export default class PhotographerProfil {// export default permet d'exporter une
         sectionPhotographerProfil.innerHTML = templatePhotographerProfil;//mettre morceau de code ci-dessus dans variable pour le mettre dans le html de la page
         new Modal().modal(photographersData);//instancier nouvelle modal appliquée aux données du photographe
         new Form().fields();//instancier nouveau form et y inclure les informations demandées (nom, email, etc)
+        
     }
 }

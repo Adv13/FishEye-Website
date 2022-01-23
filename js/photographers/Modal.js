@@ -6,6 +6,7 @@ export default class Modal {// export default permet d'exporter une class, varia
     modal(data) {//appliquer modal sur data
         let modalBtn = document.getElementById("ph-contact");//mettre l'element avec l'id "ph-contact" dans une variable
         let closeBtn = document.getElementsByClassName('close-form-icon');//mettre l'element avec la class "close-form-icon" dans une variable
+        let closeAll = document.getElementById('closeAll');
 
         if (modalBtn) {//si
             modalBtn.addEventListener('click', this.launchModal);//si il y a un clic sur le modalBtn, lancer le modal
@@ -14,10 +15,14 @@ export default class Modal {// export default permet d'exporter une class, varia
         if (closeBtn) {//si
             closeBtn[0].addEventListener('click', this.closeModal);// il y a un clic sur le closeBtn, fermer le modal
         }
-        if(closeBtn){
-            closeBtn[0].addEventListener('keydown' === 'escape', this.closeModal);
-        }
-        
+        if(modalBtn){
+            modalBtn.addEventListener('keydown', (key) =>{
+                // OPEN WITH ENTER
+                if (key.code == "Enter"){//ouvrir modal si on appuye sur la touche enter (si button en focus)
+                    this.launchModal();// afficher le block de la modal
+                }
+            });
+        }    
     }
 
     // LAUNCH MODAL
@@ -33,23 +38,6 @@ export default class Modal {// export default permet d'exporter une class, varia
 
         modalbg.style.display = 'none';//ne pas afficher le block du form à la variable
 
-    }
-
-    // WITH KEYBOARD
-    keyboardModal() {//for escape and enter form
-        document.addEventListener('keydown', (key) => {
-            let modalbg = document.getElementById("form-dialog");//mettre element avec id "form-dialog" dans une variable
-            
-            // OPEN WITH ENTER
-            if (key.code == "Enter"){//ouvrir modal si on appuye sur la touche enter (si button en focus)
-                modalbg.style.display = 'block';// afficher le block de la modal
-            }
-            //CLOSE WITH ESCAPE
-            if (key.code == "Escape") {//fermer modal si on appuye sur la touche escape
-                modalbg.style.display = 'none';//ne pas afficher le block de la modal
-            }
-            
-        })
     }
 
     // DISPLAY PH NAMES IN FORM

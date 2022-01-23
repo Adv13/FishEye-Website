@@ -3,6 +3,7 @@
 
 import Modal from './Modal.js';
 import Form from './Form.js';
+import LightBox from './LightBox.js';
 
 export default class PhotographerProfil {// export default permet d'exporter une class, variable et/ou fonction en dehors du fichier avec le même nom
     // Check on which page the user is located, if the position corresponds with the photographer's "id", create the photographer's 'Profile' section
@@ -27,6 +28,14 @@ export default class PhotographerProfil {// export default permet d'exporter une
         sectionPhotographerProfil.innerHTML = templatePhotographerProfil;//mettre morceau de code ci-dessus dans variable pour le mettre dans le html de la page
         new Modal().modal(photographersData);//instancier nouvelle modal appliquée aux données du photographe
         new Form().fields();//instancier nouveau form et y inclure les informations demandées (nom, email, etc)
-        
+        document.addEventListener('keydown', (key) => {
+            //CLOSE WITH ESCAPE
+            if (key.code === "Escape"){//fermer modal si on appuye sur la touche escape
+                new Modal().closeModal();//ne pas afficher le block de la modal
+                new LightBox().close();
+                console.log ("ECHAAAAAAPPPE");
+            }
+            
+        })
     }
 }

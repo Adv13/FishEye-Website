@@ -6,9 +6,11 @@ export default class LightBox {// export default permet d'exporter une class, va
         this.currentIndex = 0;//index actuel à 0
     }
 
+
     // initialize the lightbox when clicking on a media, call the functions allowing to navigate in the lightbox
     init(currentMedia, currentMediaName) {
         let getMedias = Array.from(document.getElementsByClassName('ph-media'));//elements with class name 'ph-media'dans variable getMedias
+
         getMedias.forEach((mediaWorks, index) => mediaWorks.addEventListener("click", () => {//pour chaque medias si clic souris
             let lightBoxMedia = document.getElementById('works-lightbox-media');//element with id 'works-lightbox-media' dans variable
             let lightBoxName = document.getElementById('works-lightbox-name');//element with id 'works-lightbox-name' dans variable
@@ -19,7 +21,11 @@ export default class LightBox {// export default permet d'exporter une class, va
             document.getElementById('works-lightbox').style.display = 'block';//element with id 'works-lightbox' affiché
             lightBoxMedia.innerHTML = `${src}`;//ajout ligne html avec src du dessus
             lightBoxName.innerHTML = `${nameSrc}`;//ajout ligne html avec nameSrc du dessus
-        }))
+        }) 
+        
+        )
+        
+        
         this.previous(document.querySelector('.left-arrow-lightbox'), currentMedia, currentMediaName);//attribuer function previous à la flèche de guache avec currentMedia + name
         this.next(document.querySelector('.right-arrow-lightbox'), currentMedia, currentMediaName);//attribuer function previous à la flèche de droite avec currentMedia + name
         this.close();//fermer
@@ -79,10 +85,10 @@ export default class LightBox {// export default permet d'exporter une class, va
             let lightBoxMedia = document.getElementById('works-lightbox-media');
             let lightBoxName = document.getElementById('works-lightbox-name');
 
-            //ENTER TO OPEN
-            if (key.code == 'Space'){
+        
+            if(key.code == "Space"){
                 let lightBox = document.getElementById('works-lightbox');//mettre id "works-lightbox" dans variable
-                
+
                 this.currentIndex = 0;
 
                 let src = currentMedia[this.currentIndex];//attribuer infos media du currentIndex dans src
@@ -90,7 +96,7 @@ export default class LightBox {// export default permet d'exporter une class, va
 
                 lightBoxMedia.innerHTML = `${src}`;//rajouter code html avec le src maj
                 lightBoxName.innerHTML = `${nameSrc}`;//rajouter code html avec nomSrc maj
-                
+
                 lightBox.style.display = 'block';//ne pas afficher la variable
             }
 
@@ -99,7 +105,6 @@ export default class LightBox {// export default permet d'exporter une class, va
                 let lightBox = document.getElementById('works-lightbox');//mettre id "works-lightbox" dans variable
                 lightBox.style.display = 'none';//ne pas afficher la variable
             }
-
 
             // ARROW RIGHT TO STEP RIGHT
             else if (key.code == "ArrowRight") {//si la touche activée correspond à la touche flèche droite du clavier

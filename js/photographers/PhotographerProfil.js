@@ -32,10 +32,8 @@ export default class PhotographerProfil {// export default permet d'exporter une
             //CLOSE WITH ESCAPE
             if (key.code === "Escape"){//fermer modal si on appuye sur la touche escape
                 new Modal().closeModal();//ne pas afficher le block de la modal
-                new LightBox().close();
                 console.log ("ECHAAAAAAPPPE");
             }
-            
         })
     }
 }
